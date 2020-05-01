@@ -64,15 +64,18 @@ function productId(items) {
 }
 
 function purchaseItem(desiredQuantity, product) {
-    var queryString = 'UPDATE products SET stock_quantity = stock_quantity -? WHERE item_id = ?';
-    connection.query(queryString, [desiredQuantity,], function (err, res) {
+    var queryString = 'UPDATE products SET stock_quantity = stock_quantity - ? WHERE ?';
+    connection.query(queryString, [desiredQuantity, product], function (err, res) {
+        if(err) throw err;
+        console.log('Purchase Sucessful!');
+        connection.end();
     })
 };
 
 function checkInventory(selectedId, items) {
     for (var i = 0; i < items.length; i++) {
         if (selectedId === items[i].item_id) {
-            return items[i];
+            return items[i].item_id;
         }
     }
     return null;
