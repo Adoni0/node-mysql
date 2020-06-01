@@ -6,3 +6,7 @@ There is a customer js file, along with a manager js file, each allowing the use
 From the bamazon Manager file, the Manager will have the option to view all columns and rows of data in the table, view the inventory of all products with less than 5 units, add units of a product into the database, and add a new product to the databse.
 
 From the bamazon Customer file, the customer can view all items in the database for sale and purchase any amount of units of that item that is available. 
+
+bamazon Customer: https://drive.google.com/file/d/12_xI168VBU6FreSI2X6Q2vZLaYQckHR5/view
+
+bamazon Manager: https://drive.google.com/file/d/1zTEH5aqFV9N5YXs3fnrELUpIvUzCnGxG/view
